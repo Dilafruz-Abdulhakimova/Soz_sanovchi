@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    #text{
+        border: 2px solid;
+        justify-content: center;
+        display: flex;
+        
+        text-align: center;
+       
+        color: white;
+       
+        box-shadow: 1px 2px 2px 2px #dacdef;
+        background-color: rgba(21, 5, 67, 0.399);
+
+    }
+    .ikki{
+        display: flex;
+        justify-content: space-evenly;
+        width: 320px;
+    }
+    span{
+        color: #000;
+        font-size: 20px;
+    }
+</style>
+<body>
+    
+<div class="container">
+    <textarea name="text" id="text" cols="30" rows="10" placeholder="Buyerga matn yozing"></textarea>
+    <div class="ikki">
+        <div class="sozDiv">
+            <span>So`zlar:</span>  <span class="soz">0</span>
+            
+        </div>
+    
+        <div class="harfDiv">
+            <span>Harflar:</span>  <span class="harf">0</span>
+            
+        </div>
+    </div>
+    
+
+
+
+</div>
+
+<script>
+    const tekst =document.getElementById('text');
+    const sozlar = document.querySelector(".soz");
+    const harflar = document.querySelector(".harf");
+
+    tekst.addEventListener("input", ()=> {  
+        harflar.textContent = tekst.value.split(" ").join('').length;
+        sozlar.textContent=tekst.value.split(' ').length-1;
+    }
+     )
+var string="salom" 
+     console.log(string.split( "" ));
+
+     let str = 'Эти три слова';
+let substrings = str.split('');
+ 
+console.log(substrings.length);
+
+
+</script>
+</body>
+</html>
